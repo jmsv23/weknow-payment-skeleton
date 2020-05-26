@@ -1,0 +1,16 @@
+"Data for an weknow payment skeleton"
+type WeknowPaymentSkeletonData {
+  "The id of the weknow payment payer"
+  customerId: String!
+  "The name of the weknow payment payer entered by the shopper"
+  fullName: String!
+  "The card number of the weknow payment payer entered by the shopper"
+  cardNumber: String!
+}
+
+extend union PaymentData = WeknowPaymentSkeletonData
+
+extend enum PaymentMethodName {
+  "Weknow payment skeleton"
+  weknow_payment_skeleton
+}
