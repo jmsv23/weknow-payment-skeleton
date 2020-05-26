@@ -21,7 +21,6 @@ export default async function weknowPaymentSkeletonCreateAuthorizedPayment(conte
     billingAddress,
     shopId,
     paymentData: {
-      customerId,
       fullName,
       cardNumber
     }
@@ -33,7 +32,7 @@ export default async function weknowPaymentSkeletonCreateAuthorizedPayment(conte
     amount,
     createdAt: new Date(),
     data: {
-      customerId,
+      customerId: Random.id(),
       fullName,
       cardNumber,
       gqlType: "WeknowPaymentSkeletonData" // GraphQL union resolver uses this
